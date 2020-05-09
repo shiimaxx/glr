@@ -18,7 +18,7 @@ Release assets:
 
 ## Usage
 
-You can run `glr` as following after changing the current directory to GitLab project root and setting GitLab Token to environment variable named `GITLAB_TOKEN`.
+Run the `glr` after you moved to the GitLab project root directory.
 
 ```
 $ glr [options] TAG
@@ -27,6 +27,15 @@ $ glr [options] TAG
 `TAG` is a git tag. You must be specified a git tag in an argument.
 
 When including assets in the release, use `-upload` option for uploading assets, or use `-asset-name` and `--asset-url` options for specifying any link.
+
+
+## GitLab Token
+
+Please set your GitLab Token. You can get GitLab Token from [this page](https://gitlab.com/profile/personal_access_tokens).
+
+```
+$ export GITLAB_TOKEN=...
+```
 
 
 ## GitLab API Endpoint
@@ -56,3 +65,8 @@ Also, if you use `-upload` option, can uploading local assets at the same time o
 
 See also [GitLab Docs - GitLab Release](https://docs.gitlab.com/ee/user/project/releases/index.html).
 
+
+## Install
+
+- Download binary from [release page](https://github.com/shiimaxx/glr/releases)
+- Copy binary to `$PATH` directory

@@ -73,8 +73,9 @@ func (g *glr) uploadFiles(pid int, files []string) ([]*asset, error) {
 		i := i
 		f := f
 		eg.Go(func() error {
-			uploadedFile, _, err := g.svc.Projects.UploadFile(pid, f)
+			uploadedFile, resp, err := g.svc.Projects.UploadFile(pid, f)
 			if err != nil {
+				fmt.Printf("%+v\n", resp)
 				return err
 			}
 			assets[i] = &asset{

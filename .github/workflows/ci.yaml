@@ -1,0 +1,24 @@
+name: CI 
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.14
+
+      - name: Run linter
+        run: |
+          GO111MODULE=off go get golang.org/x/lint/golint
+          make lint
+      - name: Run test
+        run: make test
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}

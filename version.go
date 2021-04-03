@@ -4,4 +4,4 @@ package main
 const appName = "glr"
 
 // version is the application version
-const version = "0.1.0"
+const version = "0.1.1"

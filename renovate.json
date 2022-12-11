@@ -5,8 +5,8 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["^.github/workflows/ci.yaml$"],
-      "matchStrings": ["go-version: (?<currentValue>.*?)"],
+      "fileMatch": ["^\\.github\\/workflows\\/ci\\.yaml$"],
+      "matchStrings": ["\\sgo-version:\\s(?<currentValue>.*?)\\n"],
       "depNameTemplate": "golang",
       "datasourceTemplate": "golang-version"
     }

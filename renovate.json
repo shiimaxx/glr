@@ -2,5 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^.github/workflows/ci.yaml$"],
+      "matchStrings": ["go-version: (?<currentValue>.*?)"],
+      "datasourceTemplate": "golang-version"
+    }
   ]
 }

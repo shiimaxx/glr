@@ -1,12 +1,12 @@
 module github.com/shiimaxx/glr
 
-go 1.19
+go 1.25.0
 
 require (
 	github.com/pkg/errors v0.9.1
 	github.com/tcnksm/go-gitconfig v0.1.2
 	github.com/xanzy/go-gitlab v0.48.0
-	golang.org/x/sync v0.1.0
+	golang.org/x/sync v0.22.0
 )
 
 require (
